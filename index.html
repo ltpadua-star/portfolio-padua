@@ -3,21 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        const savedSettings = localStorage.getItem("portfolioSettings");
+
+    try {
+      if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        document.documentElement.dataset.theme = settings.theme;
+      }
+    } catch (error) {
+      document.documentElement.dataset.theme = "light";
+    }
+
+
+  </script>
+
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+    
     <nav>
+    <div class="darkmode-settings">
+    <button id="darkModeButton">Theme</button>
+    </div>
+    
+    
         <a href="index.html" class="navbutton">Home</a>
         <a href="projects.html" class="navbutton">Works</a>
         <a href="about.html" class="navbutton">About</a>
         <a href="contact.html" class="navbutton">Contact</a>
+        
+    <div class="settings">
+    <input  type="text" id="visitorName" placeholder="Enter your name">
+    <button id="saveNameButton">Save Name</button>
+    <p id="welcomeMessage"></p>
+    <p id="lastVisitMessage"></p>
+    </div>
     </nav>
 
-    </div>
     <main>
-        <section>
-            <h1> LIA'S CREATIVE PORTFOLIO </h1>
-        </section>
+        <h1> CREATIVE PORTFOLIO </h1>
+        <p>Creative visuals and designs that inspire and captivate.</p>
     </main>
+
+    <footer>
+        <p>© 2026 Lia Francine T. Padua. All rights reserved.</p>
+    </footer>
+    <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

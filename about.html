@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="css/about.css">
+
+    <script>
+        const savedSettings = localStorage.getItem("portfolioSettings");
+
+    try {
+      if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        document.documentElement.dataset.theme = settings.theme;
+      }
+    } catch (error) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+     <nav>
+        <a href="index.html" class="navbutton">Home</a>
+        <a href="projects.html" class="navbutton">Works</a>
+        <a href="about.html" class="navbutton">About</a>
+        <a href="contact.html" class="navbutton">Contact</a>
+
+     <div class="settings">
+    <input  type="text" id="visitorName" placeholder="Enter your name">
+    <button id="saveNameButton">Save Name</button>
+    <p id="welcomeMessage"></p>
+    <p id="lastVisitMessage"></p>
+    </div>
+    </nav>
+    <main>
+        <section class="projects-header">
+            <h1>ABOUT ME</h1>
+        </section>
+
+        <div class="about">
+            <img src="assets/Lia Padua Pic.jpg" alt="Profile Picture">
+                <h1>Lia Francine T. Padua</h1>
+        </div>
+        <section>
+             <div class="card">  
+                <h2>EDUCATION</h2>
+                <h3>Servus Dei International College</h3> <p>2013-2019</p>
+                <h3>Casimiro A. Ynares Sr. Memorial National High School</h3> <p> 2019-2023</p>
+                <h3> Golden Faith Academy Senior High School</h3> <p>2023-2025</p>
+                <p>Academic Strand: STEM</p>
+                <h3>Far Eastern University - Institute of Technology </h3> <p>Bachelor of Multimedia Arts (Specialization in Digital Film and Animation)</p>
+             </div>
+        </section>
+        
+             <section class="skills">
+             <div class="card">
+                <h2>SKILLS  </h2>
+                <table>
+            <tr>
+                <th scope="col">Skill</th>
+                <th scope="col">Proficiency Level</th>
+            </tr>
+            <tr>
+                <td>Graphic Design</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>Digital Drawing</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>Video Editing</td>
+                <td>Intermediate</td>
+            </tr>
+                </table>
+             </div>
+            </section>
+    </main>
+
+    <script src="js/storage.js"></script>
+</body>
+</html>

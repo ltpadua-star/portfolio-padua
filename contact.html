@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/contact.css">
+
+    <script>
+        const savedSettings = localStorage.getItem("portfolioSettings");
+
+    try {
+      if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        document.documentElement.dataset.theme = settings.theme;
+      }
+    } catch (error) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+    <nav>
+    
+        <a href="index.html" class="navbutton">Home</a>
+        <a href="projects.html" class="navbutton">Works</a>
+        <a href="about.html" class="navbutton">About</a>
+        <a href="contact.html" class="navbutton">Contact</a>
+
+    <div class="settings">
+    <input  type="text" id="visitorName" placeholder="Enter your name">
+    <button id="saveNameButton">Save Name</button>
+    <p id="welcomeMessage"></p>
+    <p id="lastVisitMessage"></p>
+    </div>
+
+    </nav>
+
+    <main>
+        <section class="contact-card">
+            <h1>Contact Me!</h1>
+            <p>You can send me a message here or contact me on my socials!</p>
+        <form>
+            <form action="#" method="post">
+
+            <div>
+             <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+             <label for="message">Message:</label>
+           <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <div>
+            <button type="submit">Send</button>
+            </div>
+
+            </form>
+         </form>
+
+        <div>
+        <p>Follow me on social media for inquiries!</p>
+        </div>
+        
+        
+        <div>
+             <a href="https://www.facebook.com/@liapadua" class="button">Facebook</a>
+            <a href="https://www.instagram.com/liapansin/" class="button">Instagram</a>
+        </div>
+        </section>
+    </main>    
+   
+
+    <script src="js/storage.js"></script>
+</body>
+</html>

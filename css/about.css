@@ -1,0 +1,286 @@
+:root {
+--color-background: #b1e5ff;
+  --color-surface: #00689c;
+  --color-text: rgb(13, 33, 58);
+  --color-muted: #ffffff;
+  --color-primary: #cfefff;
+  --color-primary-dark: #4a86b1;
+  --color-border: #43769b;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  --text-small: 0.875rem;
+  --text-body: 1rem;
+  --text-large: 1.25rem;
+  --text-heading: 2rem;
+  --text-title: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+main{
+    width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 30px;
+}
+header {
+  width: min(100% - 2rem, 72rem);
+  margin: 0 auto;
+  text-align: left;
+  font-size: 10px;
+  padding: 20px;
+}
+footer {
+  width: min(100% - 2rem, 72rem);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10px;
+  padding: 20px;
+}
+
+section + section {
+  margin-top: var(--space-lg);
+}
+
+main {
+  padding-block: var(--space-xl) var(--space-md);
+object-fit: contain;
+}
+
+section img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto var(--space-md);
+  border-radius: 16px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+nav {
+    background-color: var(--color-surface);
+    padding: 30px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.navbutton {
+    color: var(--color-muted);
+    margin: 0 var(--space-sm);
+    font-weight: bold;
+}
+
+.navbutton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.button:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.box {
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+  padding: var(--space-sm);
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.projects-header {
+ width: 100%;
+ min-height: 500px;
+ background-color: var(--color-surface);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0;
+ font-size: 50px;
+ color: var(--color-muted);
+}
+
+.projects-header2 {
+ width: 100%;
+ min-height: 100px;
+ background-color: var(--color-surface);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0;
+ font-size: 30px;
+ color: var(--color-muted);
+ margin-top: 80px;
+ margin-bottom: 50px;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap:40px;
+  width: 100%;
+  margin: 50px 0;
+  text-align: left;
+  justify-content: center;
+}
+
+.about img{
+    width: 800px;
+    height: auto;
+    flex-shrink: 0;
+    padding: 70px;
+}
+
+.card {
+  width: auto;
+  padding: 50px;
+  border-radius: 16px;
+  background-color: var(--color-primary);
+  display: block;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.card h2 {
+    text-align: center;
+    justify-content: center;
+}
+
+.skills table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills th,
+.skills td {
+    text-align: center;
+
+}
+
+.dark-mode {
+    background-color: #384d56;
+    color:azure;
+}
+
+body.dark-mode .box {
+    background-color:  #5f7c8a;
+    color: white;
+}
+
+body.dark-mode .navbutton {
+    background-color:  #5f7c8a;
+    color: white;
+}
+
+.settings {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin: 20px;
+}
+
+.darkmode-settings {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin: 20px;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  main,
+  header,
+  footer {
+    width: calc(100% - 1.5rem);
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    width: 100%;
+    padding: var(--space-md);
+  }
+
+  @media (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .navbutton {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+  .settings,
+  .darkmode-settings {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 15px 10px;
+  }
+
+  .settings input,
+  .settings button,
+  .darkmode-settings button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  section img,
+  .project img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+  }
+}

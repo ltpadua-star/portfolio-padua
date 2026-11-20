@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/projects.css">
+
+<script>
+        const savedSettings = localStorage.getItem("portfolioSettings");
+
+    try {
+      if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        document.documentElement.dataset.theme = settings.theme;
+      }
+    } catch (error) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
+
+  <script src="js/script.js"></script>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="navbutton">Home</a>
+        <a href="projects.html" class="navbutton">Works</a>
+        <a href="about.html" class="navbutton">About</a>
+        <a href="contact.html" class="navbutton">Contact</a>
+
+    <div class="settings">
+    <input  type="text" id="visitorName" placeholder="Enter your name">
+    <button id="saveNameButton">Save Name</button>
+    <p id="welcomeMessage"></p>
+    <p id="lastVisitMessage"></p>
+    </div>
+
+    </nav>
+
+    <main>
+        <section class="projects-header">
+            <h1> PROJECTS </h1>
+        </section>
+
+        <section class="projects-header2">
+            <h1> GRAPHIC DESIGNS </h1>
+        </section>
+
+        <section class="projects">
+            <div class="project">
+                <img src="assets/Artboard 1-100.jpg" alt="Magazine Cover">
+                <img src="assets/Add a heading.png" alt="Social Media Poster">
+            </div>  
+            <div class="project">
+                <img src="assets/LE8_Padua.jpg" alt="Advertisement Poster">  
+                <img src="assets/Pearl Movie Poster.jpg" alt="Movie Poster">  
+            </div>
+        </section>
+
+         <section class="projects-header2">
+            <h1> ARTWORKS </h1>
+        </section>
+
+        <section class="projects">
+            <div class="project">
+                <img src="assets/advertisement artwork.png" alt="Advertisement Artwork">
+                <img src="assets/arya test.png" alt="Concept Art">
+            </div>   
+                
+            <div class="project">
+                <img src="assets/TSA7_PADUA_LIA FRANCINE.jpg" alt="Turnaround Artwork">
+            </div>
+            <div class="project">
+                <img src="assets/TSA8_PADUA_LIA FRANCINE_POSES.jpg" alt="Poses">
+                <img src="assets/CA7_LIA PADUA_EXPRESSIONS.jpg" alt="Expressions">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Lia Francine T. Padua. All rights reserved.</p>
+    </footer>
+
+    <script src="js/storage.js"></script>
+</body>
+</html>
